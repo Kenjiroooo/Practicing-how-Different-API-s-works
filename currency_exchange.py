@@ -17,3 +17,8 @@ response = urllib.request.urlopen(url)
 data = response.read().decode('utf-8')
 
 parsed_data = json.loads(data)
+
+if parsed_data['success'] == True:
+    rates = parsed_data['quotes']
+else:
+    print("Uh oh, the API returned an error.")
