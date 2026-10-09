@@ -15,3 +15,5 @@ url = "http://api.currencylayer.com/live?access_key=" + api_key
 print("Fetching data from CurrencyLayer...")
 response = urllib.request.urlopen(url)
 data = response.read().decode('utf-8')
+
+parsed_data = json.loads(data)
