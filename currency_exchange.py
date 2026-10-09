@@ -20,5 +20,10 @@ parsed_data = json.loads(data)
 
 if parsed_data['success'] == True:
     rates = parsed_data['quotes']
+    
+    usd_to_user_currency = rates.get("USD" + user_currency)
+    
+    if usd_to_user_currency == None:
+        print("Sorry, couldn't find that currency!")
 else:
     print("Uh oh, the API returned an error.")
