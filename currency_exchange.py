@@ -36,6 +36,14 @@ if parsed_data['success'] == True:
             rate_vs_usd = rates[code]
             final_rate = rate_vs_usd / usd_to_user_currency
             
+            nice_code = code.replace("USD", "")
+            if nice_code == "":
+                nice_code = "USD"
+                
+            rounded_rate = round(final_rate, 2)
+            
+            print("1 " + user_currency + " = " + str(rounded_rate) + " " + nice_code)
+            
             count = count + 1
 else:
     print("Uh oh, the API returned an error.")
