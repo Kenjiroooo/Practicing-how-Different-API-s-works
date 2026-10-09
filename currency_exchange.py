@@ -25,5 +25,17 @@ if parsed_data['success'] == True:
     
     if usd_to_user_currency == None:
         print("Sorry, couldn't find that currency!")
+    else:
+        print("\n--- Top 15 Exchange Rates (Base: " + user_currency + ") ---")
+        
+        count = 0
+        for code in rates:
+            if count == 15:
+                break
+                
+            rate_vs_usd = rates[code]
+            final_rate = rate_vs_usd / usd_to_user_currency
+            
+            count = count + 1
 else:
     print("Uh oh, the API returned an error.")
