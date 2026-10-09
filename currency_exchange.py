@@ -1,15 +1,15 @@
 import urllib.request
 import json
 
-print("Welcome to the Currency Exchange Explorer!")
+print("Welcome to the Ken's Currency Exchange!")
 # choose your own currency
-user_currency = input("Enter your main currency code (e.g., USD, EUR, PHP, JPY): ")
+user_currency = input("Enter your main currency (e.g., USD, EUR, PHP, JPY): ")
 user_currency = user_currency.upper()
 
 if user_currency == "":
     user_currency = "USD"
 
-api_key = "YOUR_API_KEY_HERE" 
+api_key = "SIYEMPRE_API_MO_YUNG_GAGAMITIN" 
 url = "http://api.currencylayer.com/live?access_key=" + api_key
 
 print("Fetching data from CurrencyLayer...")
