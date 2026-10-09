@@ -8,3 +8,6 @@ user_currency = user_currency.upper()
 
 if user_currency == "":
     user_currency = "USD"
+
+api_key = "YOUR_API_KEY_HERE" 
+url = "http://api.currencylayer.com/live?access_key=" + api_key
