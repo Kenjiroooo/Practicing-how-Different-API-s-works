@@ -11,3 +11,7 @@ if user_currency == "":
 
 api_key = "YOUR_API_KEY_HERE" 
 url = "http://api.currencylayer.com/live?access_key=" + api_key
+
+print("Fetching data from CurrencyLayer...")
+response = urllib.request.urlopen(url)
+data = response.read().decode('utf-8')
